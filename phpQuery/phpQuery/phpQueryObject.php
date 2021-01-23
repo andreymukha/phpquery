@@ -7,8 +7,6 @@
  * @package phpQuery
  * @method phpQueryObject clone () clone ()
  * @method phpQueryObject empty() empty()
- * @method phpQueryObject next() next($selector = null)
- * @method phpQueryObject prev() prev($selector = null)
  * @property Int $length
  */
 class phpQueryObject
@@ -121,19 +119,6 @@ class phpQueryObject
     }
 
     /**
-     * Deprecated, use $pq->plugin() instead.
-     *
-     * @param $class
-     * @param $file
-     * @return phpQueryObject|QueryTemplatesParse|QueryTemplatesSource|QueryTemplatesSourceQuery
-     * @deprecated
-     */
-    public static function extend($class, $file = null)
-    {
-        return $this->plugin($class, $file);
-    }
-
-    /**
      *
      * @access private
      * @param $attr
@@ -154,7 +139,7 @@ class phpQueryObject
     /**
      * Enter description here...
      *
-     * @return phpQueryObject|QueryTemplatesSource|QueryTemplatesParse|QueryTemplatesSourceQuery
+     * @return int
      */
     public function size()
     {
@@ -3592,18 +3577,6 @@ class phpQueryObject
     }
 
     // TODO phpdoc; $oldAttr is result of hasAttribute, before any changes
-
-    /**
-     * Use prev() and next().
-     *
-     * @return phpQueryObject|QueryTemplatesSource|QueryTemplatesParse|QueryTemplatesSourceQuery
-     * @access private
-     * @deprecated
-     */
-    public function _prev($selector = null)
-    {
-        return $this->prev($selector);
-    }
 
     /**
      * Enter description here...

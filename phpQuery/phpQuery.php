@@ -809,18 +809,6 @@ abstract class phpQuery {
         }
     }
 
-	/**
-	 * Parses phpQuery object or HTML result against PHP tags and makes them active.
-	 *
-	 * @param phpQuery|string $content
-	 * @deprecated
-	 * @return string
-	 */
-    public static function unsafePHPTags($content)
-    {
-        return self::markupToPHP($content);
-    }
-
     public static function DOMNodeListToArray($DOMNodeList)
     {
         $array = [];
