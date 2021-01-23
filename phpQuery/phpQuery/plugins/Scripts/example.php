@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Example script for phpQuery Script plugin
  *
